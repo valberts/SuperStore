@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: $nav-color;
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.link {
+  font-size: 150%;
+  padding: 30px;
+  margin: -30px;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:visited {
+    background-color: $hover-color;
+  }
+}
+
+.logo {
+  font-size: 150%;
+  color: white;
+  text-decoration: none;
+}
+
+.selected {
+  color: $select-color;
+}
