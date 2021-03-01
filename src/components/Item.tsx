@@ -12,11 +12,12 @@ function Item(props) {
   const [imageUrl] = useState(props.imageUrl)
 
   return (
-    <div className="item-container">
-      <div className="image-container">{<img src={imageUrl} alt="" />}</div>
-      <p>{name}</p>
-      <p>STARS RATING</p>
-      <p>{price}</p>
+    <div className="item">
+      <div>
+        <img src={imageUrl} alt="" />
+        <p className="item-title">{name}</p>
+        <p style={{ color: 'red' }}>{price}</p>
+      </div>
     </div>
   )
 }

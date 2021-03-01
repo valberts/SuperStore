@@ -23,6 +23,7 @@ nav {
   margin: -30px;
   color: white;
   text-decoration: none;
+  border-bottom: solid 1px transparent;
   &:hover {
     background-color: $hover-color;
   }
@@ -39,4 +40,5 @@ nav {
 
 .selected {
   color: $select-color;
+  border-bottom: solid 1px $select-color;
 }

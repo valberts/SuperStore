@@ -30,7 +30,7 @@ function ItemList() {
     return <div>Loading...</div>
   } else {
     return (
-      <div className="itemlist-container">
+      <div className="item-list">
         {items.map((item) => (
           <Item
             _id={item.id}

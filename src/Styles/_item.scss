@@ -1,1 +1,22 @@
 @import 'variables';
+
+.item {
+  background-color: #515374;
+
+  div {
+    background-color: white;
+    border: solid 1px #000000;
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+  }
+  img {
+    width: 50%;
+    margin: 5% 10%;
+    border-radius: 0.4rem;
+  }
+
+  p {
+    color: black;
+  }
+}
