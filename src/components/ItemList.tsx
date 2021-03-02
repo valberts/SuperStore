@@ -30,19 +30,21 @@ function ItemList() {
     return <div>Loading...</div>
   } else {
     return (
-      <div className="item-list">
-        {items.map((item) => (
-          <Item
-            _id={item.id}
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            avgRating={item.avgRating}
-            isOnSale={item.isOnSale}
-            stockCount={item.stockCount}
-            imageUrl={item.imageUrl}
-          />
-        ))}
+      <div className="itemlist-container">
+        <div className="item-list">
+          {items.map((item) => (
+            <Item
+              _id={item.id}
+              name={item.name}
+              description={item.description}
+              price={item.price}
+              avgRating={item.avgRating}
+              isOnSale={item.isOnSale}
+              stockCount={item.stockCount}
+              imageUrl={item.imageUrl}
+            />
+          ))}
+        </div>
       </div>
     )
   }

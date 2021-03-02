@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import Rating from './Rating'
 
 function Item(props) {
   const [_id] = useState(props._id)
@@ -13,11 +14,12 @@ function Item(props) {
 
   return (
     <div className="item">
-      <div>
-        <img src={imageUrl} alt="" />
-        <p className="item-title">{name}</p>
-        <p style={{ color: 'red' }}>{price}</p>
-      </div>
+      <img src={imageUrl} alt="" />
+      <p>{name}</p>
+      <p>{price}</p>
+      <p>
+        <Rating value={avgRating} />
+      </p>
     </div>
   )
 }

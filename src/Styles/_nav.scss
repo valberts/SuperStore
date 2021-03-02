@@ -2,7 +2,7 @@
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-height: 10vh;
   background: $nav-color;
@@ -10,29 +10,27 @@ nav {
 }
 
 .nav-links {
-  width: 40%;
+  width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
 }
 
 .link {
   font-size: 150%;
-  padding: 30px;
-  margin: -30px;
+  padding: 2%;
   color: white;
   text-decoration: none;
   border-bottom: solid 1px transparent;
   &:hover {
-    background-color: $hover-color;
-  }
-  &:visited {
-    background-color: $hover-color;
+    //background-color: $hover-color;
+    color: $select-color;
   }
 }
 
 .logo {
+  margin-left: 5%;
   font-size: 150%;
   color: white;
   text-decoration: none;
