@@ -7,6 +7,7 @@ nav {
   min-height: 10vh;
   background: $nav-color;
   color: white;
+  margin: -0.5rem;
 }
 
 .nav-links {
@@ -19,18 +20,19 @@ nav {
 
 .link {
   font-size: 150%;
-  padding: 2%;
+  padding: 3% 5%;
   color: white;
   text-decoration: none;
   border-bottom: solid 1px transparent;
   &:hover {
-    //background-color: $hover-color;
     color: $select-color;
+    transform: translate(1px, 3px);
+    transition: 0.5s;
   }
 }
 
 .logo {
-  margin-left: 5%;
+  padding: 0% 5%;
   font-size: 150%;
   color: white;
   text-decoration: none;

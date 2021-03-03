@@ -14,11 +14,19 @@ function Item(props) {
 
   return (
     <div className="item">
-      <img src={imageUrl} alt="" />
-      <p>{name}</p>
-      <p>{price}</p>
+      <div className="img-container">
+        <img src={imageUrl} alt="" />
+      </div>
+      <p className="name">{name}</p>
       <p>
         <Rating value={avgRating} />
+      </p>
+      <p className="price">${price}&nbsp;
+      {isOnSale ? (
+        <text className="sale">On sale</text>
+      ) : (
+        <text></text>
+      )}
       </p>
     </div>
   )

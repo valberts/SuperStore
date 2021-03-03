@@ -3,26 +3,43 @@
 .item {
   background-color: white;
   border: solid 1px rgba(0, 0, 0, 0.2);
-  width: 100%;
+  width: 22rem;
   height: 28rem;
   border-radius: 0.3rem;
   // width: 28rem;
   // height: 38rem;
 
-  img {
-    width: 50%;
-    height: auto;
-    // height: auto;
-    // max-height: 20rem;
-    // width:auto;
-    // max-width: 20rem;
-    //margin: 5% 10%;
-    border-radius: 0.4rem;
+  .sale {
+    color: white;
+    background-color: rgb(216, 5, 5);
+    font-size: 80%;
+  }
+  .img-container {
+    width: 94%;
+    height: 50%;
+    margin: 3%;
+    img {
+      object-fit: contain;
+      width:100%;
+      height:100%;
+      border-radius: 0.4rem;
+    }
   }
 
   p {
     color: black;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 150%;
+    margin-left: 2rem;
+  }
+
+  .name {
+    font-weight: normal;
+    display:flex;
+  }
+
+  .price {
+    display:flex;
+    margin-top: -5%;
   }
 }
