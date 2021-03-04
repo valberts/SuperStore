@@ -21,13 +21,13 @@ function Item(props) {
       <p>
         <Rating value={avgRating} />
       </p>
-      <p className="price">${price}&nbsp;
-      {isOnSale ? (
-        <text className="sale">On sale</text>
-      ) : (
-        <text></text>
-      )}
+      <p className="price">
+        ${price}&nbsp;
+        {isOnSale ? <text className="sale">On sale</text> : <text></text>}
       </p>
+      <div className="button-container">
+        <button>View item</button>
+      </div>
     </div>
   )
 }
