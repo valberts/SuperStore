@@ -4,7 +4,9 @@ function Home() {
   return (
     <div className="home-container">
       <h1>Home Page</h1>
-      <ItemList />
+      <ItemList 
+        url='https://gp-super-store-api.herokuapp.com/item/list?size=30'
+      />
     </div>
   )
 }

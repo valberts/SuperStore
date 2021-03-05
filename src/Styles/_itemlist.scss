@@ -1,17 +1,29 @@
 @import 'variables';
 
+.itemlist-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 60%;
+  margin-left: 20%;
+}
+
 .item-list {
   display: grid;
-  width: 55%;
-  margin-left: 20%;
-  height: auto;
   grid-auto-flow: row;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
 }
 
-// @media (max-width: $phone-width-max) {
-//     .main-container {
-//       grid-gap: 0.15rem;
-//     }
-//   }
+@media only screen and (max-width: 1200px) {
+  .item-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}

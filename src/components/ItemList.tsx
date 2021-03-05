@@ -2,14 +2,18 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Item from './../components/Item'
 
-function ItemList() {
+function ItemList(props) {
   const [error, setError] = useState(null)
   const [isLoaded, setIsLoaded] = useState(false)
   const [items, setItems] = useState([])
   const [total, setTotal] = useState(0)
 
+  function checkTotal() {
+    return total;
+  }
+
   useEffect(() => {
-    fetch('https://gp-super-store-api.herokuapp.com/item/list?size=13')
+    fetch(props.url)
       .then((res) => res.json())
       .then(
         (result) => {
