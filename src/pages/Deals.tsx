@@ -10,5 +10,5 @@ function Deals() {
     </div>
   )
 }
-
+  
 export default Deals

@@ -8,27 +8,96 @@ nav {
   background: $nav-color;
   color: white;
   margin: -0.5rem 0rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  button {
+    display: none;
+    float: right;
+    background: transparent;
+    border: none;
+    align-self: right;
+    z-index: 10;
+    cursor: pointer;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color;
+    }
+    &:focus {
+      outline-color: lightblue;
+     }
+  }
 }
 
 .nav-links {
   width: 30%;
+  text-decoration: none;
+  text-align: center;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   list-style: none;
+  margin: -5%;
+
+  .link {
+    font-size: 150%;
+    padding: 4% 7%;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color;
+    }
+  }
+
+  .selected {
+    color: $select-color;
+    border-bottom: solid 1px $select-color;
+  }
 }
 
-.link {
-  font-size: 150%;
-  padding: 3% 5%;
-  color: white;
-  text-decoration: none;
-  border-bottom: solid 1px transparent;
-  &:hover {
-    color: $select-color;
-    transform: translate(1px, 3px);
-    transition: 0.5s;
+.burger-links {
+  display: none;
+  background: $side-color;
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  float: right;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  max-width: 290px;
+  margin-top: 0rem;
+  align-items: center;
+
+  .link {
+    font-size: 200%;
+    margin-top: 30%;
+    margin-right: 10%;
+    padding: 30% 30%;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color-2;
+    }
   }
+}
+
+.burger-links.showMenu {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  width: 30%;
 }
 
 .logo {
@@ -38,7 +107,16 @@ nav {
   text-decoration: none;
 }
 
-.selected {
-  color: $select-color;
-  border-bottom: solid 1px $select-color;
+@media only screen and (max-width: 1200px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  nav{
+    button {
+      display: flex;
+    }
+  }
 }
