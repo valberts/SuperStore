@@ -72,15 +72,17 @@ nav {
   bottom: 0;
   height: 100%;
   overflow: hidden;
-  max-width: 290px;
+  max-width: 250px;
   margin-top: 0rem;
   align-items: center;
 
   .link {
     font-size: 200%;
+    height: 25%;
+    width: auto;
+    max-width: 100px;
     margin-top: 30%;
-    margin-right: 10%;
-    padding: 30% 30%;
+    padding: 4rem 2rem;
     color: white;
     text-decoration: none;
     border-bottom: solid 1px transparent;

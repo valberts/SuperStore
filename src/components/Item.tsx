@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Rating from './Rating'
+import { NavLink } from 'react-router-dom'
 
 function Item(props) {
   const [_id] = useState(props._id)
@@ -26,7 +27,13 @@ function Item(props) {
         {isOnSale ? <text className="sale">On sale</text> : <text></text>}
       </p>
       <div className="button-container">
-        <button>View item</button>
+      <NavLink
+          activeClassName="selected"
+          className="view-product"
+          to={`/item/${_id}`}
+        >
+          <button>View item</button>
+        </NavLink>
       </div>
     </div>
   )

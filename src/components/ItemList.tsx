@@ -38,7 +38,7 @@ function ItemList(props) {
         <div className="item-list">
           {items.map((item) => (
             <Item
-              _id={item.id}
+              _id={item._id}
               name={item.name}
               description={item.description}
               price={item.price}
