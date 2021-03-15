@@ -4,7 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
+  min-height: 0vh;
   background: $nav-color;
   color: white;
   margin: -0.5rem 0rem;
@@ -42,7 +42,7 @@ nav {
 
   .link {
     font-size: 150%;
-    padding: 4% 7%;
+    padding: 3% 7%;
     color: white;
     text-decoration: none;
     border-bottom: solid 1px transparent;
@@ -104,7 +104,7 @@ nav {
 
 .logo {
   padding: 0% 5%;
-  font-size: 150%;
+  font-size: 125%;
   color: white;
   text-decoration: none;
 }
