@@ -1,40 +1,124 @@
+@import 'variables';
+
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
+  min-height: 0vh;
   background: $nav-color;
   color: white;
+  margin: -0.5rem 0rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  button {
+    display: none;
+    float: right;
+    background: transparent;
+    border: none;
+    align-self: right;
+    z-index: 10;
+    cursor: pointer;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color;
+    }
+    &:focus {
+      outline-color: lightblue;
+     }
+  }
 }
 
 .nav-links {
-  width: 40%;
+  width: 30%;
+  text-decoration: none;
+  text-align: center;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   list-style: none;
+  margin: -5%;
+
+  .link {
+    font-size: 150%;
+    padding: 3% 7%;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color;
+    }
+  }
+
+  .selected {
+    color: $select-color;
+    border-bottom: solid 1px $select-color;
+  }
 }
 
-.link {
-  font-size: 150%;
-  padding: 30px;
-  margin: -30px;
-  color: white;
-  text-decoration: none;
-  &:hover {
-    background-color: $hover-color;
+.burger-links {
+  display: none;
+  background: $side-color;
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  float: right;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  max-width: 250px;
+  margin-top: 0rem;
+  align-items: center;
+
+  .link {
+    font-size: 200%;
+    height: 25%;
+    width: auto;
+    max-width: 100px;
+    margin-top: 30%;
+    padding: 4rem 2rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1px transparent;
+    &:hover {
+      color: $select-color;
+      transform: translate(1px, 3px);
+      transition: 0.5s;
+      background: $hover-color-2;
+    }
   }
-  &:visited {
-    background-color: $hover-color;
-  }
+}
+
+.burger-links.showMenu {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  width: 30%;
 }
 
 .logo {
-  font-size: 150%;
+  padding: 0% 5%;
+  font-size: 125%;
   color: white;
   text-decoration: none;
 }
 
-.selected {
-  color: $select-color;
+@media only screen and (max-width: 1200px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  nav{
+    button {
+      display: flex;
+    }
+  }
 }

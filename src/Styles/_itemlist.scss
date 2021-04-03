@@ -1,0 +1,30 @@
+@import 'variables';
+
+.itemlist-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 5rem;
+}
+
+.item-list {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .item-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}
